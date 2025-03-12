@@ -272,12 +272,12 @@ git clone https://github.com/kartik4042/Content-Moderation-System.git
 2. Compile the code
 ```bash
 cd Content-Moderation-System
-g++ -std=c++11 main.cpp -o Content_Moderation_System
+g++ -std=c++17 main.cpp -o Content_Moderation_System
 ```
 
 3. Run the application
 ```bash
-./Content_Moderation_System
+Content_Moderation_System.exe
 ```
 
 ## Contributing
