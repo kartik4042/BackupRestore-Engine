@@ -1,14 +1,14 @@
 # Use a lightweight C++ base image
-FROM gcc:11-bullseye as builder
+FROM gcc:17-bullseye as builder
 
 # Set working directory
 WORKDIR /app
 
 # Copy source code
-COPY ContentModerationSystem.cpp .
+COPY docker-main.cpp .
 
 # Compile the application
-RUN g++ -std=c++11 -o content_moderation_system ContentModerationSystem.cpp
+RUN g++ -std=c++17 -o content_moderation_system docker-main.cpp
 
 # Use a smaller runtime image
 FROM debian:bullseye-slim
