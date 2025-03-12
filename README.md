@@ -4,7 +4,7 @@
 
 This project implements a core console-based content moderation system designed to automatically detect and flag inappropriate content in text-based user-generated content. While our current implementation focuses on the fundamental algorithms and data structures required for content detection and flagging, this README provides context on the larger problem space and how this system would scale to handle real-world applications like those used by major tech platforms.
 
-![Content Moderation System Overview](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.activefence.com%2Fblog%2Fmaximizing-content-moderation-efficiency%2F&psig=AOvVaw1sAzxW0wEZOSe9DasYI7xR&ust=1741886456150000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKinvfWGhYwDFQAAAAAdAAAAABAc)
+![Content Moderation System Overview](https://www.nyckel.com/blog/images/2022/moderation-loop.webp)
 
 ## The Problem
 
