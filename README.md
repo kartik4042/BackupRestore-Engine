@@ -4,7 +4,7 @@
 
 This project implements a core console-based content moderation system designed to automatically detect and flag inappropriate content in text-based user-generated content. While our current implementation focuses on the fundamental algorithms and data structures required for content detection and flagging, this README provides context on the larger problem space and how this system would scale to handle real-world applications like those used by major tech platforms.
 
-![Content Moderation System Overview]([https://i.imgur.com/xVGmZtS.png](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*p2wfUMz5s58IHz-nK6aUng.png))
+![Content Moderation System Overview](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*p2wfUMz5s58IHz-nK6aUng.png)
 
 ## The Problem
 
