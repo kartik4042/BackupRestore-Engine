@@ -270,11 +270,19 @@ public:
     }
     
     // Add a new banned word to the system
-    void addBannedWord(const std::string& word) {
+    void addBannedWord(const std::string& word, const std::string& filename) {
         std::string lowerWord = word;
         std::transform(lowerWord.begin(), lowerWord.end(), lowerWord.begin(), ::tolower);
-        insertWord(lowerWord);
+        insertWord(lowerWord); // Insert the word into the Trie
+		
+		std::ofstream file(filename, std::ios::app);  // Open file in append mode
+		if (file.is_open()) {
+        file << lowerWord << "\n";
+        file.close();
         std::cout << "Added \"" << lowerWord << "\" to banned words list." << std::endl;
+		} else {
+        std::cerr << "Error opening file: " << filename << std::endl;
+		}
     }
     
     // Show statistics
@@ -363,7 +371,7 @@ int main() {
             case 3:
                 std::cout << "Enter new banned word: ";
                 std::getline(std::cin, input);
-                cms.addBannedWord(input);
+                cms.addBannedWord(input, bannedWordsFile);
                 break;
                 
             case 4:
