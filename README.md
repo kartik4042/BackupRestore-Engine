@@ -266,18 +266,18 @@ By understanding the fundamentals implemented in our project, developers can gai
 ### Installation
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/content-moderation-system.git
+git clone https://github.com/kartik4042/Content-Moderation-System.git
 ```
 
 2. Compile the code
 ```bash
-cd content-moderation-system
-g++ -std=c++11 main.cpp -o content_moderation_system
+cd Content-Moderation-System
+g++ -std=c++11 main.cpp -o Content_Moderation_System
 ```
 
 3. Run the application
 ```bash
-./content_moderation_system
+./Content_Moderation_System
 ```
 
 ## Contributing
