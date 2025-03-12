@@ -260,7 +260,7 @@ By understanding the fundamentals implemented in our project, developers can gai
 ## Getting Started
 
 ### Prerequisites
-- C++ compiler with C++11 support
+- C++ compiler with C++17 support
 - Standard libraries
 
 ### Installation
