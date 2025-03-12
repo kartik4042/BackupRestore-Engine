@@ -1,4 +1,3 @@
-# BackupRestore-Engine
 # Distributed Backup and Restore System with Automation
 
 ## Project Overview
