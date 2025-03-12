@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  content-moderation:
+    build: .
+    container_name: content-moderation-system
+    stdin_open: true  # Keep STDIN open
+    tty: true         # Allocate a pseudo-TTY
+    volumes:
+      # Mount a volume for persistence of banned words and feedback data
+      - moderation-data:/app/data
+    ports:
+      # If you add a REST API layer in the future
+      - "8080:8080"
+
+volumes:
+  moderation-data:
+    driver: local

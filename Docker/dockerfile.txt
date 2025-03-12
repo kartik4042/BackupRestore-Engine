@@ -1,0 +1,31 @@
+# Use a lightweight C++ base image
+FROM gcc:11-bullseye as builder
+
+# Set working directory
+WORKDIR /app
+
+# Copy source code
+COPY ContentModerationSystem.cpp .
+
+# Compile the application
+RUN g++ -std=c++11 -o content_moderation_system ContentModerationSystem.cpp
+
+# Use a smaller runtime image
+FROM debian:bullseye-slim
+
+# Install minimal runtime dependencies
+RUN apt-get update && apt-get install -y \
+    libstdc++6 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set working directory
+WORKDIR /app
+
+# Copy the built executable from the builder stage
+COPY --from=builder /app/content_moderation_system .
+
+# Copy initial banned words file if needed (will be created by the app if not present)
+# COPY banned_words.txt .
+
+# Set the executable as the entrypoint
+ENTRYPOINT ["./content_moderation_system"]
